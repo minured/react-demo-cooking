@@ -1,0 +1,22 @@
+.am-flexbox {
+  .am-flexbox-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .item-a {
+      .item-img-wrapper {
+        width: 50px;
+        height: 56px;
+        background: url("../../assets/images/subjectIcons.png");
+        // 指定大小， 让每个位置都显示第一个图标， 然后设置每个不同的偏移值，达到显示不同图标的效果
+        background-size: 350px;
+      }
+      .item-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #333;
+      }
+    }
+  }
+}

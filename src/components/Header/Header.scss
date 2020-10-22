@@ -1,0 +1,19 @@
+@import "../../assets/styles/global.scss";
+
+.navbar-wrapper {
+  .navbar {
+    background-color: $mainColor;
+  }
+  .am-navbar-left,
+  .am-navbar-right {
+    flex: 0 1 auto;
+  }
+  .am-navbar-title {
+    .am-search {
+      background-color: rgba(0, 0, 0, 0);
+      // opacity: 0; //会影响子元素
+      flex: 1;
+      padding: 0 1.111vw 0 2.222vw;
+    }
+  }
+}

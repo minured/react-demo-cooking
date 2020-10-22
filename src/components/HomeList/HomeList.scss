@@ -1,0 +1,18 @@
+div.list-item {
+  display: flex;
+  div.left-img {
+    flex: 2;
+    img {
+        width: 100%;
+    }
+  }
+
+  div.right-content {
+    flex: 4;
+    div.title {
+    }
+
+    div.des {
+    }
+  }
+}
