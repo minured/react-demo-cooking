@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import "./Login.scss";
 import Image from "../../components/ImportImg";
 // import FormInput from "../../components/FormInput/FormInput";
@@ -7,6 +8,7 @@ import { Button, List, InputItem } from "antd-mobile";
 export default function () {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  let history = useHistory();
   const onUsernameChange = (value) => {
     console.log(value);
     setUsername(value);
@@ -17,6 +19,7 @@ export default function () {
   };
   const onLoginClick = () => {
     console.log(`username: ${username}, password: ${password}`);
+    history.push("/home");
   };
   const onRegisterClick = () => {
     console.log(`username: ${username}, password: ${password}`);
@@ -47,11 +50,7 @@ export default function () {
             密码
           </InputItem>
         </List>
-        <Button
-          type="primary"
-          className="login-btn"
-          onClick={onLoginClick}
-        >
+        <Button type="primary" className="login-btn" onClick={onLoginClick}>
           登录
         </Button>
         <Button onClick={onRegisterClick}>注册</Button>

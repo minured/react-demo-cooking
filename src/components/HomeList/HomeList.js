@@ -2,16 +2,14 @@ import React, { useEffect, useState } from "react";
 import "./HomeList.scss";
 import "../../http";
 import http from "../../http";
-import { ListView, WingBlank, WhiteSpace } from "antd-mobile";
+import { WingBlank, WhiteSpace } from "antd-mobile";
 import Image from "../../components/ImportImg";
 
 // 自定义 useFetch 请求数据
 
 export default function () {
   let [subList, setSubList] = useState([]);
-
   const useFetch = (url) => {
-
     useEffect(() => {
       async function fetchData() {
         const res = await http.get(url);
@@ -23,7 +21,6 @@ export default function () {
   };
   useFetch("/sublist");
 
-
   //   const getSubList = async (url) => {
   //     const res = await http.get(url);
   //     console.log(res);
@@ -33,7 +30,6 @@ export default function () {
   //   useEffect(() => {
   //     getSubList("/sublist");
   //   }, []);
-
 
   return (
     <div className="home-sub-list">
