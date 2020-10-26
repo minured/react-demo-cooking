@@ -1,5 +1,6 @@
 import { createStore } from "redux";
 import React, { Component, Fragment } from "react";
+import SendProps from "../components/SendProps";
 
 //redux 不是专用于 react 的
 // 不同于 react-redux
@@ -62,14 +63,15 @@ export default class Test extends Component {
   render() {
     return (
       <Fragment>
-        <h1>how ot use redux</h1>
+        <hr />
         <p>state from store</p>
         <div>{JSON.stringify(this.state)}</div>
         <div>num from store: {this.state.num}</div>
         <button onClick={this.add}>action to +1</button>
 
         <hr />
-        
+        <p>props 校验</p>
+        <SendProps num={666} str={"hello"} obj={{name: "minu"}} arr={[1, 2, 3]} />
       </Fragment>
     );
   }

@@ -4,6 +4,8 @@ import Login from "./pages/Login/Login";
 import Home from "./pages/Home/Home.js";
 import HowToUseRedux from "./pages/HowToUseRedux";
 import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
+import ContextPage from "./pages/ContextPage";
+import ContextDemo from "./pages/ContextDemo";
 
 import { connect, Provider } from "react-redux";
 import { createStore } from "redux";
@@ -75,12 +77,15 @@ function App(props) {
       <button onClick={() => props.handleModifyMsg("a new msg")}>
         modify msg
       </button>
+      <hr />
       <HashRouter>
         <Switch>
           <Route path="/home" component={Home} />
           <Route exact path="/" component={Home} />
           <Route path="/login" component={Login} />
           <Route path="/howtouseredux" component={HowToUseRedux} />
+          <Route path="/contextpage" component={ContextPage} />
+          <Route path="/contextdemo" component={ContextDemo} />
           <Redirect to={"/home"} />
         </Switch>
       </HashRouter>
