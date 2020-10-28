@@ -5,10 +5,15 @@ import Home from "./pages/Home/Home.js";
 import HowToUseRedux from "./pages/HowToUseRedux";
 import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 import ContextPage from "./pages/ContextPage";
-import ContextDemo from "./pages/ContextDemo";
-
+import UseContext from "./pages/UseContext";
+import UseReducer from "./pages/UseReducer";
 import { connect, Provider } from "react-redux";
 import { createStore } from "redux";
+import UseMemo from "./pages/UseMemo";
+import UseRef from "./pages/useRef";
+import RequestPage from "./pages/bestPractices/Request";
+import UseEffectPage from "./pages/bestPractices/UseEffectPage";
+import ReactUse from "./pages/bestPractices/ReactUse";
 
 const defaultState = {
   num: 1,
@@ -78,6 +83,7 @@ function App(props) {
         modify msg
       </button>
       <hr />
+      <br />
       <HashRouter>
         <Switch>
           <Route path="/home" component={Home} />
@@ -85,7 +91,13 @@ function App(props) {
           <Route path="/login" component={Login} />
           <Route path="/howtouseredux" component={HowToUseRedux} />
           <Route path="/contextpage" component={ContextPage} />
-          <Route path="/contextdemo" component={ContextDemo} />
+          <Route path="/usecontext" component={UseContext} />
+          <Route path="/usereducer" component={UseReducer} />
+          <Route path="/usememo" component={UseMemo} />
+          <Route path="/useref" component={UseRef} />
+          <Route path="/request" component={RequestPage} />
+          <Route path="/useeffect" component={UseEffectPage} />
+          <Route path="/reactuse" component={ReactUse} />
           <Redirect to={"/home"} />
         </Switch>
       </HashRouter>

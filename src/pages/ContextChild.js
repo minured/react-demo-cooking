@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
 import InnerChild from "./InnerChild";
 
 // 从父组件导入 Consumer 用于获取provider的数据
@@ -8,6 +8,7 @@ export default function (props) {
   return (
     <Fragment>
       <div>child</div>
+      <hr />
       {/* 注意Consumer 的child只能是一个函数 */}
       <Consumer>
         {(value) => (
